@@ -50,11 +50,42 @@ namespace Game.Scripts.Player
 
         private void Update()
         {
+           /* // This condition was moved into the Calculate Movement method
             if (_canMove == true)
                 CalcutateMovement();
+            */
+        }
+
+        public void CalcutateMovement(Vector2 inputDirection)
+        {
+            _playerGrounded = _controller.isGrounded;
+            //float h = Input.GetAxisRaw("Horizontal"); // Getting this input value from PlayerManager instead
+            float h = inputDirection.x;
+            //float v = Input.GetAxisRaw("Vertical"); // Getting this input value from PlayerManager instead
+            float v = inputDirection.y;
+
+            transform.Rotate(transform.up, h);
+
+            var direction = transform.forward * v;
+            var velocity = direction * _speed;
+
+
+            _anim.SetFloat("Speed", Mathf.Abs(velocity.magnitude));
+
+
+            if (_playerGrounded)
+                velocity.y = 0f;
+            if (!_playerGrounded)
+            {
+                velocity.y += -20f * Time.deltaTime;
+            }
+            
+            if(_canMove)
+            _controller.Move(velocity * Time.deltaTime);                      
 
         }
 
+        /* // Backup Copy of the original CalculateMovement method
         private void CalcutateMovement()
         {
             _playerGrounded = _controller.isGrounded;
@@ -80,6 +111,7 @@ namespace Game.Scripts.Player
             _controller.Move(velocity * Time.deltaTime);                      
 
         }
+        */
 
         private void InteractableZone_onZoneInteractionComplete(InteractableZone zone)
         {
