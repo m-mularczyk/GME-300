@@ -53,6 +53,15 @@ public partial class @PlayerInput_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""e77cdcda-9f80-4e0e-b424-47dbd0b02018"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,173 @@ public partial class @PlayerInput_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""Action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a9b06eac-7e58-4750-ac34-085f8432fad4"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Drone"",
+            ""id"": ""92e806ec-cab5-4557-b200-98bddee2cb99"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""f66fa172-f3da-4b9c-b7ad-41ce1563f141"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Rotation"",
+                    ""type"": ""Button"",
+                    ""id"": ""af10b9f4-e0bb-4f75-b9f1-62c8dff61f34"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Thrust"",
+                    ""type"": ""Button"",
+                    ""id"": ""f77a9038-963f-4689-a15a-6ac1e0d9083f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""cbda5f4b-3b5f-4318-a606-08c84422836e"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""44446cf4-8f7e-4e4f-82f9-f3213c668868"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""ca0cf908-48ae-4a51-96dd-56db2136af45"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""72fb0f45-f004-4517-9d9a-2599bab455b0"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""cade4e87-92fb-4970-ab48-763cdfb88888"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""f35e7310-2c7b-458f-aa02-06c1d2c963e0"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""c1dadcc9-baf5-45db-b25f-ecf985f3e90c"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""07c3b93e-d7bd-4813-9d40-a9cc154f08a5"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""90de9d0f-1f00-4a78-90b6-938051028017"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Thrust"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""ee6a0e36-3129-421e-b2c2-5ee5c8d57916"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Thrust"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""2ee0ddad-359e-4089-aeba-4522c014b96d"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Thrust"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -143,6 +319,12 @@ public partial class @PlayerInput_Actions: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
         m_Player_Action = m_Player.FindAction("Action", throwIfNotFound: true);
+        m_Player_Escape = m_Player.FindAction("Escape", throwIfNotFound: true);
+        // Drone
+        m_Drone = asset.FindActionMap("Drone", throwIfNotFound: true);
+        m_Drone_Movement = m_Drone.FindAction("Movement", throwIfNotFound: true);
+        m_Drone_Rotation = m_Drone.FindAction("Rotation", throwIfNotFound: true);
+        m_Drone_Thrust = m_Drone.FindAction("Thrust", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +389,7 @@ public partial class @PlayerInput_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Interaction;
     private readonly InputAction m_Player_Action;
+    private readonly InputAction m_Player_Escape;
     public struct PlayerActions
     {
         private @PlayerInput_Actions m_Wrapper;
@@ -214,6 +397,7 @@ public partial class @PlayerInput_Actions: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Interaction => m_Wrapper.m_Player_Interaction;
         public InputAction @Action => m_Wrapper.m_Player_Action;
+        public InputAction @Escape => m_Wrapper.m_Player_Escape;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +416,9 @@ public partial class @PlayerInput_Actions: IInputActionCollection2, IDisposable
             @Action.started += instance.OnAction;
             @Action.performed += instance.OnAction;
             @Action.canceled += instance.OnAction;
+            @Escape.started += instance.OnEscape;
+            @Escape.performed += instance.OnEscape;
+            @Escape.canceled += instance.OnEscape;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -245,6 +432,9 @@ public partial class @PlayerInput_Actions: IInputActionCollection2, IDisposable
             @Action.started -= instance.OnAction;
             @Action.performed -= instance.OnAction;
             @Action.canceled -= instance.OnAction;
+            @Escape.started -= instance.OnEscape;
+            @Escape.performed -= instance.OnEscape;
+            @Escape.canceled -= instance.OnEscape;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -262,10 +452,79 @@ public partial class @PlayerInput_Actions: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Drone
+    private readonly InputActionMap m_Drone;
+    private List<IDroneActions> m_DroneActionsCallbackInterfaces = new List<IDroneActions>();
+    private readonly InputAction m_Drone_Movement;
+    private readonly InputAction m_Drone_Rotation;
+    private readonly InputAction m_Drone_Thrust;
+    public struct DroneActions
+    {
+        private @PlayerInput_Actions m_Wrapper;
+        public DroneActions(@PlayerInput_Actions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_Drone_Movement;
+        public InputAction @Rotation => m_Wrapper.m_Drone_Rotation;
+        public InputAction @Thrust => m_Wrapper.m_Drone_Thrust;
+        public InputActionMap Get() { return m_Wrapper.m_Drone; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DroneActions set) { return set.Get(); }
+        public void AddCallbacks(IDroneActions instance)
+        {
+            if (instance == null || m_Wrapper.m_DroneActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_DroneActionsCallbackInterfaces.Add(instance);
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
+            @Rotation.started += instance.OnRotation;
+            @Rotation.performed += instance.OnRotation;
+            @Rotation.canceled += instance.OnRotation;
+            @Thrust.started += instance.OnThrust;
+            @Thrust.performed += instance.OnThrust;
+            @Thrust.canceled += instance.OnThrust;
+        }
+
+        private void UnregisterCallbacks(IDroneActions instance)
+        {
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
+            @Rotation.started -= instance.OnRotation;
+            @Rotation.performed -= instance.OnRotation;
+            @Rotation.canceled -= instance.OnRotation;
+            @Thrust.started -= instance.OnThrust;
+            @Thrust.performed -= instance.OnThrust;
+            @Thrust.canceled -= instance.OnThrust;
+        }
+
+        public void RemoveCallbacks(IDroneActions instance)
+        {
+            if (m_Wrapper.m_DroneActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IDroneActions instance)
+        {
+            foreach (var item in m_Wrapper.m_DroneActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_DroneActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public DroneActions @Drone => new DroneActions(this);
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnInteraction(InputAction.CallbackContext context);
         void OnAction(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
+    }
+    public interface IDroneActions
+    {
+        void OnMovement(InputAction.CallbackContext context);
+        void OnRotation(InputAction.CallbackContext context);
+        void OnThrust(InputAction.CallbackContext context);
     }
 }

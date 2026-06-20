@@ -13,17 +13,23 @@ public class PlayerManager : MonoBehaviour
     {
         _input = new PlayerInput_Actions();
         _input.Player.Movement.Enable();
-
-        //_input.Player.Movement.performed += Movement_performed;
     }
 
-    private void Movement_performed(InputAction.CallbackContext context)
-    {
-        Debug.Log("Player moving ");
-    }
 
     void Update()
     {
         _player.CalcutateMovement(_input.Player.Movement.ReadValue<Vector2>());
+    }
+
+    public void SetPlayerInVehicle(bool value)
+    {
+        if (value == true)
+        {
+            _input.Player.Movement.Disable();
+        }
+        else
+        {
+            _input.Player.Movement.Enable();
+        }
     }
 }
