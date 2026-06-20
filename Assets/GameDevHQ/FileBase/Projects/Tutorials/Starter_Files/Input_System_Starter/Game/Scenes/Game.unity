@@ -3268,6 +3268,7 @@ MonoBehaviour:
   _displayMessage: Break the Crate
   _zoneItems: []
   _inventoryIcon: {fileID: 21300000, guid: 88841726d7ebbfc46bf799ee1bfb7d3f, type: 3}
+  _zoneInputType: 0
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1808342870}
@@ -8652,6 +8653,7 @@ MonoBehaviour:
   _zoneItems:
   - {fileID: 758722189}
   _inventoryIcon: {fileID: 21300000, guid: 8e46bcb2f14d4d144b9e4a395b47efa2, type: 3}
+  _zoneInputType: 0
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 605505802}
@@ -10773,6 +10775,7 @@ MonoBehaviour:
   _displayMessage: Denotate C4
   _zoneItems: []
   _inventoryIcon: {fileID: 21300000, guid: 88841726d7ebbfc46bf799ee1bfb7d3f, type: 3}
+  _zoneInputType: 1
   _zoneKeyInput: 32
   _keyState: 0
   _marker: {fileID: 1331263896}
@@ -13252,7 +13255,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.1835e-41, y: 3.673421e-39, z: 2.6448623e-36, w: 1.147944e-39}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4.7580784e-10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -18309,6 +18312,7 @@ MonoBehaviour:
   _displayMessage: Reset
   _zoneItems: []
   _inventoryIcon: {fileID: 0}
+  _zoneInputType: 0
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1578479318}
@@ -18438,8 +18442,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972744894}
-  m_LocalRotation: {x: 0.2215042, y: 0.046950277, z: -0.010677622, w: 0.97397}
-  m_LocalPosition: {x: -0.48177326, y: 4.5286655, z: -4.833789}
+  m_LocalRotation: {x: 0.22150686, y: 0.046705306, z: -0.010621908, w: 0.9739818}
+  m_LocalPosition: {x: -0.48177248, y: 4.5286655, z: -4.833789}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25290,6 +25294,7 @@ MonoBehaviour:
   - {fileID: 474256985}
   - {fileID: 908574055}
   _inventoryIcon: {fileID: 21300000, guid: 81dff3a1ca824714aae965897edd2351, type: 3}
+  _zoneInputType: 0
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1583429342}
@@ -26529,7 +26534,7 @@ PrefabInstance:
     - target: {fileID: 5779097134961922744, guid: 1d553f90302742946bbf45996165949c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.478
+      value: 8.856999
       objectReference: {fileID: 0}
     - target: {fileID: 5779097134961922744, guid: 1d553f90302742946bbf45996165949c,
         type: 3}
@@ -26602,6 +26607,7 @@ MonoBehaviour:
   _displayMessage: Drive Forklift
   _zoneItems: []
   _inventoryIcon: {fileID: 21300000, guid: 88841726d7ebbfc46bf799ee1bfb7d3f, type: 3}
+  _zoneInputType: 0
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1840441541}
@@ -28145,11 +28151,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 101
+    m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 34
-    m_MaxSize: 124
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -28182,8 +28188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51, y: 34.5}
-  m_SizeDelta: {x: 1224.5714, y: 98.95758}
+  m_AnchoredPosition: {x: 0, y: 114.33}
+  m_SizeDelta: {x: 634.0723, y: 128.6682}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1351534806 stripped
 Transform:
@@ -36084,6 +36090,7 @@ MonoBehaviour:
   _displayMessage: Fly Drone
   _zoneItems: []
   _inventoryIcon: {fileID: 0}
+  _zoneInputType: 0
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1041737524}
@@ -36209,7 +36216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c14085171003ee2478ef40ebd5fcbee8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.036
+      value: 7.415
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c14085171003ee2478ef40ebd5fcbee8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39836,6 +39843,7 @@ MonoBehaviour:
   _displayMessage: Hack Cameras
   _zoneItems: []
   _inventoryIcon: {fileID: 0}
+  _zoneInputType: 0
   _zoneKeyInput: 101
   _keyState: 1
   _marker: {fileID: 55150249}
@@ -40827,7 +40835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -22.7266, y: -339.8598}
+  m_AnchoredPosition: {x: -0.0000076294, y: 196}
   m_SizeDelta: {x: 765.6395, y: 118.2805}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2107796545
