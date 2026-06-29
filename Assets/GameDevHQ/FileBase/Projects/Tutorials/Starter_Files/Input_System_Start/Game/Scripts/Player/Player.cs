@@ -50,34 +50,41 @@ namespace Game.Scripts.Player
 
         private void Update()
         {
+            /* // This part moved to CalcutateMovement with receiving directions from PlayerInput
             if (_canMove == true)
                 CalcutateMovement();
-
+            */
         }
 
-        private void CalcutateMovement()
+        //private void CalcutateMovement()
+        public void CalcutateMovement(Vector2 inputDirection)
         {
-            _playerGrounded = _controller.isGrounded;
-            float h = Input.GetAxisRaw("Horizontal");
-            float v = Input.GetAxisRaw("Vertical");
-
-            transform.Rotate(transform.up, h);
-
-            var direction = transform.forward * v;
-            var velocity = direction * _speed;
-
-
-            _anim.SetFloat("Speed", Mathf.Abs(velocity.magnitude));
-
-
-            if (_playerGrounded)
-                velocity.y = 0f;
-            if (!_playerGrounded)
+            if(_canMove == true)
             {
-                velocity.y += -20f * Time.deltaTime;
+                _playerGrounded = _controller.isGrounded;
+                //float h = Input.GetAxisRaw("Horizontal");
+                float h = inputDirection.x;
+                //float v = Input.GetAxisRaw("Vertical");
+                float v = inputDirection.y;
+
+                transform.Rotate(transform.up, h);
+
+                var direction = transform.forward * v;
+                var velocity = direction * _speed;
+
+
+                _anim.SetFloat("Speed", Mathf.Abs(velocity.magnitude));
+
+
+                if (_playerGrounded)
+                    velocity.y = 0f;
+                if (!_playerGrounded)
+                {
+                    velocity.y += -20f * Time.deltaTime;
+                }
+
+                _controller.Move(velocity * Time.deltaTime);
             }
-            
-            _controller.Move(velocity * Time.deltaTime);                      
 
         }
 
