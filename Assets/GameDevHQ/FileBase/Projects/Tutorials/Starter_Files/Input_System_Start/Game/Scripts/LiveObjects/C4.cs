@@ -30,7 +30,7 @@ namespace Game.Scripts.LiveObjects
                 }
             }
             
-            Destroy(this.gameObject);           
+            Destroy(this.gameObject);     
         }
 
         public void Place(Transform target)
