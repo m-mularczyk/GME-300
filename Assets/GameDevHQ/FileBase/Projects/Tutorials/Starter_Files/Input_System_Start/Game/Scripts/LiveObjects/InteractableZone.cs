@@ -332,6 +332,30 @@ namespace Game.Scripts.LiveObjects
                     //Debug.Log("HoldAction zone requires hold input, not tap");
                     break;
             }
+
+            Laptop laptop = GetLaptop();
+            if (laptop != null)
+            {
+                laptop.NextSurveillanceCamera();
+            }
+        }
+
+        public void ExitZoneActivity()
+        {
+            GetLaptop()?.ExitSurveillanceCameras();
+        }
+
+        private Laptop GetLaptop()
+        {
+            foreach (var item in _zoneItems)
+            {
+                if (item == null) continue;
+
+                var laptop = item.GetComponent<Laptop>();
+                if (laptop != null)
+                    return laptop;
+            }
+            return null;
         }
     }
 }

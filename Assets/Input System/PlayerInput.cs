@@ -24,6 +24,7 @@ public class PlayerInput : MonoBehaviour
         _input.Player.Enable();
         _input.Player.Interaction.started += Interaction_started;
         _input.Player.Interaction.canceled += Interaction_canceled;
+        _input.Player.Exit.performed += Exit_performed;
     }
 
     private void Interaction_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -50,7 +51,12 @@ public class PlayerInput : MonoBehaviour
         {
             _zoneInRange.EndHold();
         }
+    }
 
+    private void Exit_performed(InputAction.CallbackContext obj)
+    {
+        // On Exit performed
+        _zoneInRange?.ExitZoneActivity();
     }
 
     void Update()

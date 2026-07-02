@@ -31,6 +31,7 @@ namespace Game.Scripts.LiveObjects
 
         private void Update()
         {
+            /*
             if (_hacked == true)
             {
                 if (Input.GetKeyDown(KeyCode.E))
@@ -54,6 +55,7 @@ namespace Game.Scripts.LiveObjects
                     ResetCameras();
                 }
             }
+            */
         }
 
         void ResetCameras()
@@ -112,6 +114,33 @@ namespace Game.Scripts.LiveObjects
         {
             InteractableZone.onHoldStarted -= InteractableZone_onHoldStarted;
             InteractableZone.onHoldEnded -= InteractableZone_onHoldEnded;
+        }
+
+        public void NextSurveillanceCamera()
+        {
+            if (_hacked == true)
+            {
+                var previous = _activeCamera;
+                _activeCamera++;
+
+
+                if (_activeCamera >= _cameras.Length)
+                    _activeCamera = 0;
+
+
+                _cameras[_activeCamera].Priority = 11;
+                _cameras[previous].Priority = 9;
+
+                Debug.Log("Switching to the next surveillance camera");
+            }
+            
+        }
+
+        public void ExitSurveillanceCameras()
+        {
+            _hacked = false;
+            onHackEnded?.Invoke();
+            ResetCameras();
         }
     }
 
